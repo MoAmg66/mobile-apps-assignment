@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // For libraries hosted on JitPack
+        maven { url 'https://maven.google.com' } // For Firebase dependencies
+    }
+    dependencies {
+        // Android Gradle Plugin
+        classpath "com.android.tools.build:gradle:8.1.0"
+
+        // Safe Args for Jetpack Navigation
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.0"
+
+        // Kotlin Plugin
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+
+        // Google Services Plugin for Firebase
+        classpath 'com.google.gms:google-services:4.3.10'
+
+        // Hilt for Dependency Injection
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
